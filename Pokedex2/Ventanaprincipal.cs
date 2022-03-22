@@ -168,7 +168,7 @@ namespace Pokedex2
             
             if (misPokemons.Rows[0]["preEvolucion"].ToString() != "")
             {
-                ventana.imagenEvolucion(convierteBlobAImagen((Byte[])misPokemons2.Rows[0]["imagen"]));
+                ventana.imagenEvolucion2(convierteBlobAImagen((Byte[])misPokemons2.Rows[0]["imagen"]));
             }
             
 
