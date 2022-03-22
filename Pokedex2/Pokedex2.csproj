@@ -90,6 +90,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ventana2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,7 +107,7 @@
     <Compile Include="Ventanaprincipal.Designer.cs">
       <DependentUpon>Ventanaprincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ventana2.resx">
       <DependentUpon>ventana2.cs</DependentUpon>
@@ -111,15 +116,10 @@
       <DependentUpon>Ventanaprincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -138,19 +138,13 @@
     <None Include="Resources\fondo1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\boton inicio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\botonesMenu2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\boton derecho.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\botonizquierdo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pokedex2.01.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\boton inicio.jpg" />
+    <None Include="Resources\pokedex2.0.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

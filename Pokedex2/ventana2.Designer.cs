@@ -41,8 +41,9 @@
             // 
             // cajaDescripcion
             // 
-            this.cajaDescripcion.Font = new System.Drawing.Font("NSimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajaDescripcion.ForeColor = System.Drawing.Color.Lime;
+            this.cajaDescripcion.BackColor = System.Drawing.Color.Red;
+            this.cajaDescripcion.Font = new System.Drawing.Font("NSimSun", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cajaDescripcion.ForeColor = System.Drawing.Color.Black;
             this.cajaDescripcion.Location = new System.Drawing.Point(24, 23);
             this.cajaDescripcion.Name = "cajaDescripcion";
             this.cajaDescripcion.Size = new System.Drawing.Size(240, 216);
@@ -52,26 +53,30 @@
             // 
             // evolucion2
             // 
+            this.evolucion2.BackColor = System.Drawing.Color.Red;
             this.evolucion2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.evolucion2.Location = new System.Drawing.Point(27, 293);
             this.evolucion2.Name = "evolucion2";
             this.evolucion2.Size = new System.Drawing.Size(109, 119);
+            this.evolucion2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.evolucion2.TabIndex = 4;
             this.evolucion2.TabStop = false;
             // 
             // evolucion
             // 
+            this.evolucion.BackColor = System.Drawing.Color.Red;
             this.evolucion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.evolucion.Location = new System.Drawing.Point(155, 293);
             this.evolucion.Name = "evolucion";
             this.evolucion.Size = new System.Drawing.Size(109, 119);
+            this.evolucion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.evolucion.TabIndex = 3;
             this.evolucion.TabStop = false;
             this.evolucion.Click += new System.EventHandler(this.evolucion_Click);
             // 
             // imagenPokemon
             // 
-            this.imagenPokemon.Location = new System.Drawing.Point(383, 12);
+            this.imagenPokemon.Location = new System.Drawing.Point(386, 12);
             this.imagenPokemon.Name = "imagenPokemon";
             this.imagenPokemon.Size = new System.Drawing.Size(109, 125);
             this.imagenPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
