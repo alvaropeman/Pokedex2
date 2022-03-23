@@ -205,7 +205,7 @@
             this.button3.ForeColor = System.Drawing.Color.Lime;
             this.button3.Location = new System.Drawing.Point(705, 309);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(63, 76);
+            this.button3.Size = new System.Drawing.Size(70, 76);
             this.button3.TabIndex = 17;
             this.button3.Text = "iniciar/\r\nreiniciar";
             this.button3.UseVisualStyleBackColor = true;

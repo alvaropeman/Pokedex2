@@ -18,8 +18,12 @@ namespace Pokedex2
         DataTable misPokemons = new DataTable();
         DataTable misPokemons2 = new DataTable();
         DataTable misPokemons3 = new DataTable();
-        
+        DataTable misPokemons4 = new DataTable();
+        DataTable misPokemons5 = new DataTable();
         int idActual = 1;
+        int idAnterior = 0;
+        int idSiguiente = 2;
+        
 
         int encender = 0;
         
@@ -46,15 +50,19 @@ namespace Pokedex2
             if (encender >= 1)
             {
                 idActual--;
-
+                idAnterior--;
+                idSiguiente--;
 
 
                 if (idActual <= 0) { idActual = 151; }
-
+                if (idSiguiente<= 0) { idSiguiente = 151; }
+                if (idAnterior <= 0) { idAnterior = 151; }
 
                 misPokemons = miConexion.getPokemonPorId(idActual);
                 misPokemons2 = miConexion.getPreEvolucionPorId(idActual);
                 misPokemons3 = miConexion.getPosEvolucionPorId(idActual);
+                misPokemons4 = miConexion.getPreEvolucionPorId(idAnterior);
+                misPokemons5 = miConexion.getPosEvolucionPorId(idSiguiente);
 
                 nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
                 pictureBox2.Image = convierteBlobAImagen((Byte[])misPokemons.Rows[0]["imagen"]);
@@ -62,12 +70,26 @@ namespace Pokedex2
                 {
                     preEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons2.Rows[0]["imagen"]);
                 }
-                else { preEvolucion.Image = null; }
+                else if(misPokemons.Rows[0]["posEvolucion"].ToString() != "" && misPokemons3.Rows[0]["posEvolucion"].ToString() != "")
+                {
+                    preEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons5.Rows[0]["imagen"]);
+                }
+                else
+                {
+                    preEvolucion.Image = null;
+                }
                 if (misPokemons.Rows[0]["posEvolucion"].ToString() != "")
                 {
                     posEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons3.Rows[0]["imagen"]);
                 }
-                else { posEvolucion.Image = null; }
+                else if (misPokemons.Rows[0]["preEvolucion"].ToString() != "" && misPokemons2.Rows[0]["preEvolucion"].ToString() != "")
+                {
+                    posEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons4.Rows[0]["imagen"]);
+                }
+                else
+                {
+                    posEvolucion.Image = null;
+                }
             }
 
 
@@ -83,26 +105,45 @@ namespace Pokedex2
             if (encender >= 1)
             {
                 idActual++;
-
+                idSiguiente++;
+                idAnterior++;
 
                 if (idActual > 151) { idActual = 1; }
-
+                if (idAnterior > 151) { idAnterior = 1; }
+                if (idSiguiente > 151) { idSiguiente = 1; }
 
                 misPokemons = miConexion.getPokemonPorId(idActual);
                 misPokemons2 = miConexion.getPreEvolucionPorId(idActual);
                 misPokemons3 = miConexion.getPosEvolucionPorId(idActual);
+                misPokemons4 = miConexion.getPreEvolucionPorId(idAnterior);
+                misPokemons5 = miConexion.getPosEvolucionPorId(idSiguiente);
+
                 nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
                 pictureBox2.Image = convierteBlobAImagen((Byte[])misPokemons.Rows[0]["imagen"]);
                 if (misPokemons.Rows[0]["preEvolucion"].ToString() != "")
                 {
                     preEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons2.Rows[0]["imagen"]);
                 }
-                else { preEvolucion.Image = null; }
+               else if (misPokemons.Rows[0]["posEvolucion"].ToString() != "" && misPokemons3.Rows[0]["posEvolucion"].ToString() != "")
+                {
+                  preEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons5.Rows[0]["imagen"]);
+               }
+                else
+                {
+                    preEvolucion.Image = null;
+                }
                 if (misPokemons.Rows[0]["posEvolucion"].ToString() != "")
                 {
                     posEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons3.Rows[0]["imagen"]);
                 }
-                else { posEvolucion.Image = null; }
+                else if (misPokemons.Rows[0]["preEvolucion"].ToString() != "" && misPokemons2.Rows[0]["preEvolucion"].ToString() != "")
+                {
+                    posEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons4.Rows[0]["imagen"]);
+               }
+                else
+                {
+                    posEvolucion.Image = null;
+                }
 
 
             }
@@ -165,15 +206,23 @@ namespace Pokedex2
                 {
                     ventana.imagenEvolucion(convierteBlobAImagen((Byte[])misPokemons3.Rows[0]["imagen"]));
                 }
-            
-            if (misPokemons.Rows[0]["preEvolucion"].ToString() != "")
+                else if (misPokemons.Rows[0]["preEvolucion"].ToString() != "" && misPokemons2.Rows[0]["preEvolucion"].ToString() != "")
+                {
+                    ventana.imagenEvolucion(convierteBlobAImagen((Byte[])misPokemons4.Rows[0]["imagen"]));
+                }
+
+                if (misPokemons.Rows[0]["preEvolucion"].ToString() != "")
             {
                 ventana.imagenEvolucion2(convierteBlobAImagen((Byte[])misPokemons2.Rows[0]["imagen"]));
             }
-            
+                else if (misPokemons.Rows[0]["posEvolucion"].ToString() != "" && misPokemons3.Rows[0]["posEvolucion"].ToString() != "")
+                {
+                    ventana.imagenEvolucion2(convierteBlobAImagen((Byte[])misPokemons5.Rows[0]["imagen"]));
+                }
 
-            
-            ventana.Show();
+
+
+                ventana.Show();
             
         }}
 
@@ -186,21 +235,31 @@ namespace Pokedex2
         {
             encender++;
             idActual = 1;
+            idAnterior = 0;
+            idSiguiente = 2;
+            
+            
+
             misPokemons = miConexion.getPokemonPorId(idActual);
             misPokemons2 = miConexion.getPreEvolucionPorId(idActual);
             misPokemons3 = miConexion.getPosEvolucionPorId(idActual);
+            misPokemons5 = miConexion.getPosEvolucionPorId(idSiguiente);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
             pictureBox2.Image = convierteBlobAImagen((Byte[])misPokemons.Rows[0]["imagen"]);
-            if (misPokemons.Rows[0]["preEvolucion"].ToString() != "")
-            {
-                preEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons2.Rows[0]["imagen"]);
-            }
-            else { preEvolucion.Image = null; }
+            
+                preEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons5.Rows[0]["imagen"]);
+            
+          
+           
             if (misPokemons.Rows[0]["posEvolucion"].ToString() != "")
             {
                 posEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons3.Rows[0]["imagen"]);
             }
-            else { posEvolucion.Image = null; }
+           
+            else
+            {
+                posEvolucion.Image = null;
+            }
         }
     }
 }

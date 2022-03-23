@@ -32,11 +32,9 @@
             this.evolucion2 = new System.Windows.Forms.PictureBox();
             this.evolucion = new System.Windows.Forms.PictureBox();
             this.imagenPokemon = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.evolucion2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evolucion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenPokemon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cajaDescripcion
@@ -76,40 +74,29 @@
             // 
             // imagenPokemon
             // 
-            this.imagenPokemon.Location = new System.Drawing.Point(386, 12);
+            this.imagenPokemon.Location = new System.Drawing.Point(390, 6);
             this.imagenPokemon.Name = "imagenPokemon";
             this.imagenPokemon.Size = new System.Drawing.Size(109, 125);
             this.imagenPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenPokemon.TabIndex = 1;
             this.imagenPokemon.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Pokedex2.Properties.Resources.fondo1;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(496, 427);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Ventana2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Pokedex2.Properties.Resources.fondo1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(504, 424);
             this.Controls.Add(this.evolucion2);
             this.Controls.Add(this.evolucion);
             this.Controls.Add(this.imagenPokemon);
             this.Controls.Add(this.cajaDescripcion);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "Ventana2";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.evolucion2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evolucion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenPokemon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,7 +105,6 @@
 
         private System.Windows.Forms.Label cajaDescripcion;
         private System.Windows.Forms.PictureBox imagenPokemon;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox evolucion;
         private System.Windows.Forms.PictureBox evolucion2;
     }
