@@ -146,5 +146,17 @@
   <ItemGroup>
     <None Include="Resources\pokedex2.0.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descripcion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descripcion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descripcion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descripcion3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

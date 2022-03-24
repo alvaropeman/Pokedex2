@@ -45,6 +45,16 @@ namespace Pokedex2022_CSharp
             evolucion2.Image = image;
             
         }
+        internal void habilidad(String descripcion)
+        {
+            habilidades.Text = descripcion;
+
+        }
+        internal void perfil(String descripcion)
+        {
+            tipo.Text = descripcion;
+
+        }
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -62,6 +72,11 @@ namespace Pokedex2022_CSharp
             Ventanaprincipal v = new Ventanaprincipal();
             this.Hide();
             v.Show();
+        }
+
+        private void Ventana2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

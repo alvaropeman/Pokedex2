@@ -118,19 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="botonesMenu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botonesMenu2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pokedex2.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pokedex2.0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="boton inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boton inicio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pokedex2.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pokedex2.0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="descripcion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descripcion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonesMenu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonesMenu2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="descripcion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descripcion1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="descripcion2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descripcion2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="descripcion3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descripcion3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

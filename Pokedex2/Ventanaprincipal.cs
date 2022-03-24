@@ -202,7 +202,9 @@ namespace Pokedex2
             Ventana2 ventana = new Ventana2();
             
             ventana.cambiaDescripcionPokemon(misPokemons.Rows[0]["descripcion"].ToString());
-            ventana.imagenPokimon(convierteBlobAImagen((Byte[])misPokemons.Rows[0]["imagen"]));
+            ventana.habilidad(misPokemons.Rows[0]["habilidad"].ToString());
+            ventana.perfil("tipo/ " + misPokemons.Rows[0]["tipo1"].ToString() + " " + misPokemons.Rows[0]["tipo2"].ToString());
+                ventana.imagenPokimon(convierteBlobAImagen((Byte[])misPokemons.Rows[0]["imagen"]));
             if(misPokemons.Rows[0]["posEvolucion"].ToString() != "")
                 {
                     ventana.imagenEvolucion(convierteBlobAImagen((Byte[])misPokemons3.Rows[0]["imagen"]));
