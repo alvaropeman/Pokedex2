@@ -7,23 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pokedex2;
 
 namespace Pokedex2022_CSharp
 {
     public partial class Ventana2 : Form
     {
+        Conexion miConexion = new Conexion();
+        DataTable misPokemons = new DataTable();
         public void cambiaDescripcionPokemon(String descripcion)
         {
             cajaDescripcion.Text = descripcion;
         }
-      
+
 
         public Ventana2()
         {
             InitializeComponent();
 
         }
-
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.WindowsShutDown)
+                return;
+            Application.Exit();
+        }
         internal void imagenPokimon(Image image)
         {
             imagenPokemon.Image =image;
@@ -35,6 +43,7 @@ namespace Pokedex2022_CSharp
         internal void imagenEvolucion2(Image image)
         {
             evolucion2.Image = image;
+            
         }
 
 
@@ -45,7 +54,14 @@ namespace Pokedex2022_CSharp
 
         private void evolucion_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ventanaprincipal v = new Ventanaprincipal();
+            this.Hide();
+            v.Show();
         }
     }
 }

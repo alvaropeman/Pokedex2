@@ -24,14 +24,13 @@ namespace Pokedex2
         int idAnterior = 0;
         int idSiguiente = 2;
         
-
         int encender = 0;
         
         public Ventanaprincipal()
         {
             InitializeComponent();
         }
-
+       
 
         private Image convierteBlobAImagen(byte[] img)
         {
@@ -198,8 +197,10 @@ namespace Pokedex2
         }
 
         private void descripcion_Click(object sender, EventArgs e)
-        { if (encender >= 1) { 
+        { if (encender >= 1) {
+                
             Ventana2 ventana = new Ventana2();
+            
             ventana.cambiaDescripcionPokemon(misPokemons.Rows[0]["descripcion"].ToString());
             ventana.imagenPokimon(convierteBlobAImagen((Byte[])misPokemons.Rows[0]["imagen"]));
             if(misPokemons.Rows[0]["posEvolucion"].ToString() != "")
@@ -210,6 +211,7 @@ namespace Pokedex2
                 {
                     ventana.imagenEvolucion(convierteBlobAImagen((Byte[])misPokemons4.Rows[0]["imagen"]));
                 }
+           
 
                 if (misPokemons.Rows[0]["preEvolucion"].ToString() != "")
             {
@@ -221,8 +223,9 @@ namespace Pokedex2
                 }
 
 
-
+                this.Hide();
                 ventana.Show();
+                
             
         }}
 
@@ -248,7 +251,7 @@ namespace Pokedex2
             pictureBox2.Image = convierteBlobAImagen((Byte[])misPokemons.Rows[0]["imagen"]);
             
                 preEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons5.Rows[0]["imagen"]);
-            
+           
           
            
             if (misPokemons.Rows[0]["posEvolucion"].ToString() != "")

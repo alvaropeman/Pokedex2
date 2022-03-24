@@ -49,7 +49,7 @@
             // nombrePokemon
             // 
             this.nombrePokemon.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.nombrePokemon.Font = new System.Drawing.Font("NSimSun", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombrePokemon.Font = new System.Drawing.Font("NSimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombrePokemon.ForeColor = System.Drawing.Color.Lime;
             this.nombrePokemon.Location = new System.Drawing.Point(29, 71);
             this.nombrePokemon.Name = "nombrePokemon";
@@ -66,7 +66,7 @@
             this.boton_izq.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.boton_izq.Location = new System.Drawing.Point(446, 342);
             this.boton_izq.Name = "boton_izq";
-            this.boton_izq.Size = new System.Drawing.Size(32, 30);
+            this.boton_izq.Size = new System.Drawing.Size(28, 26);
             this.boton_izq.TabIndex = 0;
             this.boton_izq.UseVisualStyleBackColor = false;
             this.boton_izq.Click += new System.EventHandler(this.button3_Click);
@@ -80,7 +80,7 @@
             this.boton_der.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.boton_der.Location = new System.Drawing.Point(511, 343);
             this.boton_der.Name = "boton_der";
-            this.boton_der.Size = new System.Drawing.Size(30, 29);
+            this.boton_der.Size = new System.Drawing.Size(27, 25);
             this.boton_der.TabIndex = 3;
             this.boton_der.UseVisualStyleBackColor = false;
             this.boton_der.Click += new System.EventHandler(this.boton_der_Click);
@@ -103,7 +103,7 @@
             this.nombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nombre.Location = new System.Drawing.Point(20, 291);
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(138, 63);
+            this.nombre.Size = new System.Drawing.Size(138, 66);
             this.nombre.TabIndex = 8;
             this.nombre.Text = "nombre";
             this.nombre.UseVisualStyleBackColor = true;
@@ -128,9 +128,9 @@
             this.tipoEspecie.BackgroundImage = global::Pokedex2.Properties.Resources.botonesMenu2;
             this.tipoEspecie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tipoEspecie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tipoEspecie.Location = new System.Drawing.Point(282, 291);
+            this.tipoEspecie.Location = new System.Drawing.Point(281, 291);
             this.tipoEspecie.Name = "tipoEspecie";
-            this.tipoEspecie.Size = new System.Drawing.Size(113, 64);
+            this.tipoEspecie.Size = new System.Drawing.Size(113, 67);
             this.tipoEspecie.TabIndex = 10;
             this.tipoEspecie.Text = "tipo ";
             this.tipoEspecie.UseVisualStyleBackColor = true;
@@ -143,7 +143,7 @@
             this.movimmientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.movimmientos.Location = new System.Drawing.Point(156, 291);
             this.movimmientos.Name = "movimmientos";
-            this.movimmientos.Size = new System.Drawing.Size(126, 64);
+            this.movimmientos.Size = new System.Drawing.Size(126, 67);
             this.movimmientos.TabIndex = 11;
             this.movimmientos.Text = "movimientos";
             this.movimmientos.UseVisualStyleBackColor = true;
@@ -168,9 +168,9 @@
             this.descripcion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.descripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.descripcion.ForeColor = System.Drawing.Color.Black;
-            this.descripcion.Location = new System.Drawing.Point(20, 236);
+            this.descripcion.Location = new System.Drawing.Point(20, 234);
             this.descripcion.Name = "descripcion";
-            this.descripcion.Size = new System.Drawing.Size(138, 56);
+            this.descripcion.Size = new System.Drawing.Size(139, 57);
             this.descripcion.TabIndex = 13;
             this.descripcion.Text = "descripcion";
             this.descripcion.UseVisualStyleBackColor = true;
@@ -215,7 +215,7 @@
             // 
             this.BackgroundImage = global::Pokedex2.Properties.Resources.pokedex2_0;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(813, 424);
+            this.ClientSize = new System.Drawing.Size(812, 424);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.posEvolucion);
             this.Controls.Add(this.preEvolucion);

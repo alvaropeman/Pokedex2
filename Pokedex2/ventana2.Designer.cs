@@ -32,6 +32,7 @@
             this.evolucion2 = new System.Windows.Forms.PictureBox();
             this.evolucion = new System.Windows.Forms.PictureBox();
             this.imagenPokemon = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.evolucion2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evolucion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenPokemon)).BeginInit();
@@ -81,6 +82,16 @@
             this.imagenPokemon.TabIndex = 1;
             this.imagenPokemon.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(405, 358);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Ventana2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,6 +99,7 @@
             this.BackgroundImage = global::Pokedex2.Properties.Resources.fondo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(504, 424);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.evolucion2);
             this.Controls.Add(this.evolucion);
             this.Controls.Add(this.imagenPokemon);
@@ -107,5 +119,6 @@
         private System.Windows.Forms.PictureBox imagenPokemon;
         private System.Windows.Forms.PictureBox evolucion;
         private System.Windows.Forms.PictureBox evolucion2;
+        private System.Windows.Forms.Button button1;
     }
 }
