@@ -30,7 +30,13 @@ namespace Pokedex2
         {
             InitializeComponent();
         }
-       
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.WindowsShutDown)
+                return;
+            Application.Exit();
+        }
 
         private Image convierteBlobAImagen(byte[] img)
         {
@@ -252,7 +258,7 @@ namespace Pokedex2
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
             pictureBox2.Image = convierteBlobAImagen((Byte[])misPokemons.Rows[0]["imagen"]);
             
-                preEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons5.Rows[0]["imagen"]);
+            preEvolucion.Image = convierteBlobAImagen((Byte[])misPokemons5.Rows[0]["imagen"]);
            
           
            

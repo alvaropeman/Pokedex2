@@ -15,11 +15,7 @@ namespace Pokedex2022_CSharp
     {
         Conexion miConexion = new Conexion();
         DataTable misPokemons = new DataTable();
-        public void cambiaDescripcionPokemon(String descripcion)
-        {
-            cajaDescripcion.Text = descripcion;
-        }
-
+       
 
         public Ventana2()
         {
@@ -32,6 +28,11 @@ namespace Pokedex2022_CSharp
                 return;
             Application.Exit();
         }
+        internal void cambiaDescripcionPokemon(String descripcion)
+        {
+            cajaDescripcion.Text = descripcion;
+        }
+
         internal void imagenPokimon(Image image)
         {
             imagenPokemon.Image =image;
